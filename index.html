@@ -49,7 +49,7 @@
               manrope: "Manrope",
             },
             backgroundImage: {
-              lets_connect: "url('/assets/bg.jpg')",
+              lets_connect: "url('./assets/bg.jpg')",
             },
           },
         },
@@ -61,22 +61,20 @@
       <nav class="max-w-6xl mx-auto">
         <div class="navbar">
           <!-- Nav Start -->
-          <div class="navbar-start">
+          <div class="navbar-start w-full lg:w-1/5">
             <div
               class="bg-bg_primary inline-flex justify-center items-center rounded-full p-2 mr-3"
             >
               <i class="fa-solid fa-arrow-right -rotate-45"></i>
             </div>
-            <div class="hidden lg:block">
-              <h1 class="font-bold text-2xl">Rinte rio</h1>
-            </div>
-            <div class="block lg:hidden">
-              <h1 class="font-bold text-2xl">Rinterio</h1>
+            <div>
+              <h1 class="font-bold text-2xl hidden lg:block">Rinte rio</h1>
+              <h1 class="font-bold text-2xl block lg:hidden">Rinterio</h1>
             </div>
           </div>
           <!-- Nav Menu -->
-          <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1">
+          <div class="navbar-center hidden lg:flex pr-12">
+            <ul class="menu menu-horizontal px-3">
               <li class="text-slate-800 font-bold"><a>Home</a></li>
               <li class="text-text_secondary"><a>Services</a></li>
               <li class="text-text_secondary"><a>Protfolio</a></li>
@@ -85,7 +83,7 @@
             </ul>
           </div>
           <!-- Navbar End -->
-          <div class="navbar-end hidden lg:block space-x-4">
+          <div class="hidden lg:block space-x-5">
             <div
               class="bg-white inline-flex items-center justify-center p-2 rounded-full"
             >
@@ -100,7 +98,7 @@
             <button class="bg-bg_primary py-2 px-4 rounded-full font-bold">
               Book Consult
               <div
-                class="bg-black inline-flex justify-center items-center rounded-full p-2 mr-3 ml-3 text-white"
+                class="bg-black inline-flex justify-center items-center rounded-full p-2 ml-3 text-white"
               >
                 <i class="fa-solid fa-arrow-right -rotate-45"></i>
               </div>
@@ -109,11 +107,15 @@
           <!-- Hidden Dropdown -->
           <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-              <i class="fa-solid fa-bars"></i>
+              <div
+                class="bg-white inline-flex items-center justify-center p-2 rounded-full"
+              >
+                <i class="fa-solid fa-bars"></i>
+              </div>
             </div>
             <ul
               tabindex="0"
-              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow right-0"
+              class="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow right-0"
             >
               <li class="text-slate-800 font-bold"><a>Home</a></li>
               <li class="text-text_secondary"><a>Services</a></li>
@@ -148,7 +150,7 @@
               <button class="bg-bg_opacity py-2 px-4 rounded-full font-bold">
                 View Details
                 <div
-                  class="bg-bg_primary inline-flex justify-center items-center rounded-full p-2 mr-3 ml-3"
+                  class="bg-bg_primary inline-flex justify-center items-center rounded-full p-2 ml-3"
                 >
                   <i class="fa-solid fa-arrow-right -rotate-45"></i>
                 </div>
@@ -227,13 +229,13 @@
           </div>
           <!-- Right Image -->
           <div>
-            <img class="h-[518px]" src="./assets/Rectangle.png" alt="" />
+            <img class="lg:h-[515px]" src="./assets/Rectangle.png" alt="" />
           </div>
         </div>
       </section>
       <!-- Work Process Section -->
-      <section class="bg-gray-100 mt-10 pb-5">
-        <div class="max-w-6xl mx-auto">
+      <section class="bg-gray-100 pb-5">
+        <div class="max-w-6xl mx-auto pt-10">
           <!-- content -->
           <div class="flex flex-col items-center mx-auto pt-5">
             <!-- How We Works -->
@@ -343,12 +345,18 @@
             <div class="bg-white border-2 p-4 rounded-lg">
               <img class="w-full h-full" src="./assets/img2.png" alt="" />
             </div>
+            <!-- 3rd (Small Devices) Card Image -->
+            <div
+              class="bg-white border-2 p-4 rounded-lg order-3 block lg:hidden"
+            >
+              <img class="w-full h-full" src="./assets/img5.png" alt="" />
+            </div>
           </div>
           <!--End Of First Grid Card -->
           <!-- Second Grid Card -->
           <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-4 p-4 lg:p-0">
             <!-- Left Side Card Image -->
-            <div class="bg-white border-2 rounded-lg p-4">
+            <div class="bg-white border-2 rounded-lg p-4 hidden lg:block">
               <img class="w-full h-full" src="./assets/img3.png" alt="" />
             </div>
             <!-- Span Middle Card -->
@@ -372,8 +380,12 @@
                 </h1>
               </div>
             </div>
+            <!-- 5th (small Device) Card Image -->
+            <div class="bg-white border-2 rounded-lg p-4 block lg:hidden">
+              <img class="w-full h-full" src="./assets/img3.png" alt="" />
+            </div>
             <!-- Right Side Card Image -->
-            <div class="bg-white border-2 p-4 rounded-lg">
+            <div class="bg-white border-2 p-4 rounded-lg order-3">
               <img class="w-full h-full" src="./assets/img5.png" alt="" />
             </div>
           </div>
@@ -381,85 +393,111 @@
       </section>
       <!-- End Latest Protfolio -->
       <!-- Discuss Next Project -->
-      <section class="bg-lets_connect bg-no-repeat bg-cover mt-10 
-      pb-4">
-          <div class="flex flex-col items-center text-center space-y-4 py-10">
-            <!-- Let’s Connect-->
-            <button class="bg-bg_latest py-2 px-4 rounded-full font-bold">
-              <i class="fa-solid fa-arrow-right mr-2"></i>
-              Let’s Connect
-            </button>
-            <!-- Text -->
-            <h1 class="text-4xl font-bold">Let’s Discuss Next Project</h1>
-            <p class="lg:w-2/4 px-5 lg:px-0 mx-auto text-text_description">
-              Discussing the next project involves outlining its scope,
-              objectives, requirements, and execution plan.
-            </p>
-          </div>
-          <div class="lg:w-2/4 lg:mx-auto">
+      <section class="bg-lets_connect bg-no-repeat bg-cover mt-10 pb-10">
+        <div class="flex flex-col items-center text-center space-y-4 py-10">
+          <!-- Let’s Connect-->
+          <button class="bg-bg_latest py-2 px-4 rounded-full font-bold">
+            <i class="fa-solid fa-arrow-right mr-2"></i>
+            Let’s Connect
+          </button>
+          <!-- Text -->
+          <h1 class="text-4xl font-bold">Let’s Discuss Next Project</h1>
+          <p class="lg:w-2/4 px-5 lg:px-0 mx-auto text-text_description">
+            Discussing the next project involves outlining its scope,
+            objectives, requirements, and execution plan.
+          </p>
+        </div>
+        <div class="lg:w-2/4 lg:mx-auto">
           <!-- From Section -->
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 px-4 lg:px-0"> 
-              <input class="py-2 px-6 rounded-full outline-none" type="text" placeholder="First Name*" />
-              <input class="py-2 px-6 rounded-full outline-none" type="text" placeholder="Last Name*" />
-              <input class=" py-2 px-6 rounded-full outline-none" type="text" placeholder="Phone Number*" />
-              <input class="py-2 px-6 rounded-full outline-none" type="text" placeholder="Email Number*" />
-              <textarea rows="5" class="p-2 rounded-xl lg:col-span-2 outline-none" placeholder="Write your message here"></textarea>
-              <!-- Send Mail Button -->
-              <button class="bg-bg_primary py-2 px-4 rounded-full font-bold lg:col-span-2">
-                Send Mail
-                <div
-                  class="bg-black inline-flex justify-center items-center rounded-full p-2 mr-3 ml-3 text-white"
-                >
-                  <i class="fa-solid fa-arrow-right -rotate-45"></i>
-                </div>
-              </button>
-          </div>
-        </div>
-      </section>
-    </main>
-<!-- Footer Section -->
- <section class="bg-bg_footer">
-    <div class="flex flex-col items-center text-center space-y-4 py-10">
-        <!-- Footer Title-->
-        <div class="flex items-center">
-            <div
-              class="bg-bg_primary inline-flex justify-center items-center rounded-full p-2 mr-3"
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 px-4 lg:px-0">
+            <input
+              class="py-2 px-6 rounded-full outline-none"
+              type="text"
+              placeholder="First Name*"
+            />
+            <input
+              class="py-2 px-6 rounded-full outline-none"
+              type="text"
+              placeholder="Last Name*"
+            />
+            <input
+              class="py-2 px-6 rounded-full outline-none"
+              type="text"
+              placeholder="Phone Number*"
+            />
+            <input
+              class="py-2 px-6 rounded-full outline-none"
+              type="text"
+              placeholder="Email Number*"
+            />
+            <textarea
+              rows="5"
+              class="p-2 rounded-xl lg:col-span-2 outline-none"
+              placeholder="Write your message here"
+            ></textarea>
+            <!-- Send Mail Button -->
+            <button
+              class="bg-bg_primary py-2 px-4 rounded-full font-bold lg:col-span-2"
             >
-              <i class="fa-solid fa-arrow-right -rotate-45"></i>
-            </div>
-            <div>
-              <h1 class="font-bold text-2xl text-white">Rinte rio</h1>
-            </div>
-          </div>
-        <!-- Text -->
-        <div class="lg:w-2/4">
-            <p class="px-5 lg:px-0 mx-auto text-text_secondary">
-                The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.
-            </p>
-        </div>
-        <!-- Footer Menu -->
-        <div class="w-3/5 pt-5">
-            <ul class="grid grid-cols-1 lg:grid-cols-5 items-center gap-3 lg:gap-26">
-              <li class="text-text_footer"><a>Home</a></li>
-              <li class="text-text_footer"><a>Services</a></li>
-              <li class="text-text_footer"><a>Protfolio</a></li>
-              <li class="text-text_footer"><a>Blogs</a></li>
-              <li class="text-text_footer"><a>Contact Us</a></li>
-            </ul>
-          </div>
-          <!-- Footer End -->
-          <div class="space-x-4 pt-5 w-full p-6">
-            <!-- Button -->
-            <button class="bg-bg_primary text-black py-2 rounded-full font-extrabold w-full lg:w-[200px]">
-              Book Consult
+              Send Mail
               <div
-                class="bg-black inline-flex justify-center items-center rounded-full p-2 ml-3 text-white"
+                class="bg-black inline-flex justify-center items-center rounded-full p-2 mr-3 ml-3 text-white"
               >
                 <i class="fa-solid fa-arrow-right -rotate-45"></i>
               </div>
             </button>
           </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer Section -->
+    <section class="bg-bg_footer">
+      <div class="flex flex-col items-center text-center space-y-4 py-10">
+        <!-- Footer Title-->
+        <div class="flex items-center">
+          <div
+            class="bg-bg_primary inline-flex justify-center items-center rounded-full p-2 mr-3"
+          >
+            <i class="fa-solid fa-arrow-right -rotate-45"></i>
+          </div>
+          <div>
+            <h1 class="font-bold text-2xl text-white">Rinte rio</h1>
+          </div>
+        </div>
+        <!-- Text -->
+        <div class="lg:w-2/4">
+          <p class="px-5 lg:px-0 mx-auto text-text_secondary">
+            The barn house captivates with its blend of rustic charm and modern
+            sophistication, featuring weathered wood, sleek metal accents.
+          </p>
+        </div>
+        <!-- Footer Menu -->
+        <div class="w-3/5 pt-5">
+          <ul
+            class="grid grid-cols-1 lg:grid-cols-5 items-center gap-3 lg:gap-26"
+          >
+            <li class="text-text_footer"><a>Home</a></li>
+            <li class="text-text_footer"><a>Services</a></li>
+            <li class="text-text_footer"><a>Protfolio</a></li>
+            <li class="text-text_footer"><a>Blogs</a></li>
+            <li class="text-text_footer"><a>Contact Us</a></li>
+          </ul>
+        </div>
+        <!-- Footer End -->
+        <div class="space-x-4 pt-5 w-full p-6">
+          <!-- Button -->
+          <button
+            class="bg-bg_primary text-black py-2 rounded-full font-extrabold w-full lg:w-[200px]"
+          >
+            Book Consult
+            <div
+              class="bg-black inline-flex justify-center items-center rounded-full p-2 ml-3 text-white"
+            >
+              <i class="fa-solid fa-arrow-right -rotate-45"></i>
+            </div>
+          </button>
+        </div>
       </div>
- </section>
+    </section>
   </body>
 </html>
