@@ -40,8 +40,10 @@
               bg_budget: "#77AAEA",
               bg_opacity: "rgba(171, 239, 95, 0.5)",
               bg_latest: "rgba(171, 239, 95, 0.2)",
+              bg_footer: "#1C1C1C",
               text_secondary: "#737373",
               text_description: "#494949",
+              text_footer: "#E9E9E9",
             },
             fontFamily: {
               manrope: "Manrope",
@@ -397,11 +399,11 @@
           <div class="lg:w-2/4 lg:mx-auto">
           <!-- From Section -->
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 px-4 lg:px-0"> 
-              <input class="py-2 px-6 rounded-full" type="text" placeholder="First Name*" />
-              <input class="py-2 px-6 rounded-full" type="text" placeholder="Last Name*" />
-              <input class=" py-2 px-6 rounded-full" type="text" placeholder="Phone Number*" />
-              <input class="py-2 px-6 rounded-full" type="text" placeholder="Email Number*" />
-              <textarea rows="5" class="p-2 rounded-xl lg:col-span-2" placeholder="Write your message here"></textarea>
+              <input class="py-2 px-6 rounded-full outline-none" type="text" placeholder="First Name*" />
+              <input class="py-2 px-6 rounded-full outline-none" type="text" placeholder="Last Name*" />
+              <input class=" py-2 px-6 rounded-full outline-none" type="text" placeholder="Phone Number*" />
+              <input class="py-2 px-6 rounded-full outline-none" type="text" placeholder="Email Number*" />
+              <textarea rows="5" class="p-2 rounded-xl lg:col-span-2 outline-none" placeholder="Write your message here"></textarea>
               <!-- Send Mail Button -->
               <button class="bg-bg_primary py-2 px-4 rounded-full font-bold lg:col-span-2">
                 Send Mail
@@ -415,5 +417,49 @@
         </div>
       </section>
     </main>
+<!-- Footer Section -->
+ <section class="bg-bg_footer">
+    <div class="flex flex-col items-center text-center space-y-4 py-10">
+        <!-- Footer Title-->
+        <div class="flex items-center">
+            <div
+              class="bg-bg_primary inline-flex justify-center items-center rounded-full p-2 mr-3"
+            >
+              <i class="fa-solid fa-arrow-right -rotate-45"></i>
+            </div>
+            <div>
+              <h1 class="font-bold text-2xl text-white">Rinte rio</h1>
+            </div>
+          </div>
+        <!-- Text -->
+        <div class="lg:w-2/4">
+            <p class="px-5 lg:px-0 mx-auto text-text_secondary">
+                The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.
+            </p>
+        </div>
+        <!-- Footer Menu -->
+        <div class="w-3/5 pt-5">
+            <ul class="grid grid-cols-1 lg:grid-cols-5 items-center gap-3 lg:gap-26">
+              <li class="text-text_footer"><a>Home</a></li>
+              <li class="text-text_footer"><a>Services</a></li>
+              <li class="text-text_footer"><a>Protfolio</a></li>
+              <li class="text-text_footer"><a>Blogs</a></li>
+              <li class="text-text_footer"><a>Contact Us</a></li>
+            </ul>
+          </div>
+          <!-- Footer End -->
+          <div class="space-x-4 pt-5 w-full p-6">
+            <!-- Button -->
+            <button class="bg-bg_primary text-black py-2 rounded-full font-extrabold w-full lg:w-[200px]">
+              Book Consult
+              <div
+                class="bg-black inline-flex justify-center items-center rounded-full p-2 ml-3 text-white"
+              >
+                <i class="fa-solid fa-arrow-right -rotate-45"></i>
+              </div>
+            </button>
+          </div>
+      </div>
+ </section>
   </body>
 </html>
