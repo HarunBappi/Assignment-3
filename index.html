@@ -379,8 +379,9 @@
       </section>
       <!-- End Latest Protfolio -->
       <!-- Discuss Next Project -->
-      <section class="bg-lets_connect bg-no-repeat bg-cover mt-10 h-[500px]">
-        <div class="flex flex-col items-center text-center space-y-4 py-10">
+      <section class="bg-lets_connect bg-no-repeat bg-cover mt-10 
+      pb-4">
+          <div class="flex flex-col items-center text-center space-y-4 py-10">
             <!-- Let’s Connect-->
             <button class="bg-bg_latest py-2 px-4 rounded-full font-bold">
               <i class="fa-solid fa-arrow-right mr-2"></i>
@@ -389,9 +390,29 @@
             <!-- Text -->
             <h1 class="text-4xl font-bold">Let’s Discuss Next Project</h1>
             <p class="lg:w-2/4 px-5 lg:px-0 mx-auto text-text_description">
-                Discussing the next project involves outlining its scope, objectives, requirements, and execution plan. 
+              Discussing the next project involves outlining its scope,
+              objectives, requirements, and execution plan.
             </p>
           </div>
+          <div class="lg:w-2/4 lg:mx-auto">
+          <!-- From Section -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 px-4 lg:px-0"> 
+              <input class="py-2 px-6 rounded-full" type="text" placeholder="First Name*" />
+              <input class="py-2 px-6 rounded-full" type="text" placeholder="Last Name*" />
+              <input class=" py-2 px-6 rounded-full" type="text" placeholder="Phone Number*" />
+              <input class="py-2 px-6 rounded-full" type="text" placeholder="Email Number*" />
+              <textarea rows="5" class="p-2 rounded-xl lg:col-span-2" placeholder="Write your message here"></textarea>
+              <!-- Send Mail Button -->
+              <button class="bg-bg_primary py-2 px-4 rounded-full font-bold lg:col-span-2">
+                Send Mail
+                <div
+                  class="bg-black inline-flex justify-center items-center rounded-full p-2 mr-3 ml-3 text-white"
+                >
+                  <i class="fa-solid fa-arrow-right -rotate-45"></i>
+                </div>
+              </button>
+          </div>
+        </div>
       </section>
     </main>
   </body>
